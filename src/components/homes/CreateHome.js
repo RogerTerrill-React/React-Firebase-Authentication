@@ -8,11 +8,10 @@ class CreateHome extends Component {
     zipcode: '',
     overview: '',
     monthlyRent: 0,
+    sqft: 0,
     bedrooms: 0,
-    baths: 0,
-    masterBedroomDimsFeet: 0,
-    guestBedroomDimsFeet1: 0,
-    guestBedroomDimsFeet2: 0,
+    bathrooms: 0,
+    parkingSpots: 0,
     image1Link: ''
   };
 
@@ -23,11 +22,10 @@ class CreateHome extends Component {
     zipcode: '',
     overview: '',
     monthlyRent: 0,
+    sqft: 0,
     bedrooms: 0,
-    baths: 0,
-    masterBedroomDimsFeet: 0,
-    guestBedroomDimsFeet1: 0,
-    guestBedroomDimsFeet2: 0,
+    bathrooms: 0,
+    parkingSpots: 0,
     image1Link: ''
   };
 
@@ -85,7 +83,7 @@ class CreateHome extends Component {
               </div>
             </div>
             <div className='row'>
-              <div className='input-field col s6'>
+              <div className='input-field col s2'>
                 <input
                   id='monthlyRent'
                   type='text'
@@ -94,60 +92,54 @@ class CreateHome extends Component {
                 />
                 <label htmlFor='monthlyRent'>Monthly Rent</label>
               </div>
-              <div className='input-field col s6'>
+              <div className='input-field col s2'>
                 <input
-                  id='lastName'
+                  id='sqft'
+                  type='number'
+                  onChange={this.changeHandler}
+                  className='validate'
+                />
+                <label htmlFor='sqft'>Sqft</label>
+              </div>
+              <div className='input-field col s2'>
+                <input
+                  id='bedrooms'
+                  type='number'
+                  onChange={this.changeHandler}
+                  className='validate'
+                />
+                <label htmlFor='bedrooms'>Bedrooms</label>
+              </div>
+              <div className='input-field col s2'>
+                <input
+                  id='bathrooms'
+                  step="0.25"
+                  type='number'
+                  onChange={this.changeHandler}
+                  className='validate'
+                />
+                <label htmlFor='bathrooms'>Bathrooms</label>
+              </div>
+              <div className='input-field col s2'>
+                <input
+                  id='bedroomDims'
                   type='text'
                   onChange={this.changeHandler}
                   className='validate'
                 />
-                <label htmlFor='lastName'>Last Name</label>
+                <label htmlFor='bedroomDims'>Bedroom Dimensions</label>
               </div>
-            </div>
-            <div className='row'>
-              <div className='input-field col s12'>
+              <div className='input-field col s2'>
                 <input
-                  id='email'
-                  type='email'
+                  id='parkingSpots'
+                  type='number'
                   onChange={this.changeHandler}
                   className='validate'
                 />
-                <label htmlFor='email'>Email</label>
+                <label htmlFor='parkingSpots'>Parking Spots</label>
               </div>
             </div>
-            <div className='row'>
-              <div className='input-field col s12'>
-                <input
-                  id='username'
-                  type='text'
-                  onChange={this.changeHandler}
-                  className='validate'
-                />
-                <label htmlFor='username'>Username</label>
-              </div>
-            </div>
-            <div className='row'>
-              <div className='input-field col s12'>
-                <input
-                  id='password'
-                  type='password'
-                  onChange={this.changeHandler}
-                  className='validate'
-                />
-                <label htmlFor='password'>Password</label>
-              </div>
-            </div>
-            <div className='row'>
-              <div className='input-field col s12'>
-                <input
-                  id='password2'
-                  type='password'
-                  onChange={this.changeHandler}
-                  className='validate'
-                />
-                <label htmlFor='password2'>Confirm Password</label>
-              </div>
-            </div>
+
             <div className='row'>
               <div className='input-field col s12'>
                 <button
@@ -156,7 +148,7 @@ class CreateHome extends Component {
                   name='action'
                   onClick={this.submitHandler}
                 >
-                  Sign Up
+                  Add New Home
                 </button>
               </div>
             </div>
