@@ -1,35 +1,23 @@
 import React, { Component } from 'react';
 
-class CreateHome extends Component {
+class SignUp extends Component {
   state = {
-    address: '',
-    city: '',
-    state: '',
-    zipcode: '',
-    overview: '',
-    monthlyRent: 0,
-    bedrooms: 0,
-    baths: 0,
-    masterBedroomDimsFeet: 0,
-    guestBedroomDimsFeet1: 0,
-    guestBedroomDimsFeet2: 0,
-    image1Link: ''
+    firstName: '',
+    lastName: '',
+    email: '',
+    username: '',
+    password: '',
+    password2: ''
   };
 
-  stateInit = {
-    address: '',
-    city: '',
-    state: '',
-    zipcode: '',
-    overview: '',
-    monthlyRent: 0,
-    bedrooms: 0,
-    baths: 0,
-    masterBedroomDimsFeet: 0,
-    guestBedroomDimsFeet1: 0,
-    guestBedroomDimsFeet2: 0,
-    image1Link: ''
-  };
+  stateInit =  {
+    firstName: '',
+    lastName: '',
+    email: '',
+    username: '',
+    password: '',
+    password2: ''
+  }
 
   changeHandler = event => {
     this.setState({ [event.target.id]: event.target.value });
@@ -38,7 +26,7 @@ class CreateHome extends Component {
   submitHandler = event => {
     event.preventDefault();
     console.log(this.state);
-    this.setState(this.stateInit);
+    this.setState(this.stateInit)
   };
 
   render() {
@@ -47,52 +35,14 @@ class CreateHome extends Component {
         <div className='row'>
           <form className='col s12'>
             <div className='row'>
-              <div className='input-field col s4'>
-                <input
-                  id='address'
-                  type='text'
-                  onChange={this.changeHandler}
-                  className='validate'
-                />
-                <label htmlFor='address'>Address</label>
-              </div>
-              <div className='input-field col s4'>
-                <input
-                  id='city'
-                  type='text'
-                  onChange={this.changeHandler}
-                  className='validate'
-                />
-                <label htmlFor='city'>City</label>
-              </div>
-              <div className='input-field col s2'>
-                <input
-                  id='state'
-                  type='text'
-                  onChange={this.changeHandler}
-                  className='validate'
-                />
-                <label htmlFor='state'>State</label>
-              </div>
-              <div className='input-field col s2'>
-                <input
-                  id='zipcode'
-                  type='text'
-                  onChange={this.changeHandler}
-                  className='validate'
-                />
-                <label htmlFor='zipcode'>Zipcode</label>
-              </div>
-            </div>
-            <div className='row'>
               <div className='input-field col s6'>
                 <input
-                  id='monthlyRent'
+                  id='firstName'
                   type='text'
                   onChange={this.changeHandler}
                   className='validate'
                 />
-                <label htmlFor='monthlyRent'>Monthly Rent</label>
+                <label htmlFor='firstName'>First Name</label>
               </div>
               <div className='input-field col s6'>
                 <input
@@ -167,4 +117,4 @@ class CreateHome extends Component {
   }
 }
 
-export default CreateHome;
+export default SignUp;
