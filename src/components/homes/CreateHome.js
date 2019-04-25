@@ -45,7 +45,7 @@ class CreateHome extends Component {
         <div className='row'>
           <form className='col s12'>
             <div className='row'>
-              <div className='input-field col s4'>
+              <div className='input-field col s3'>
                 <input
                   id='address'
                   type='text'
@@ -54,7 +54,7 @@ class CreateHome extends Component {
                 />
                 <label htmlFor='address'>Address</label>
               </div>
-              <div className='input-field col s4'>
+              <div className='input-field col s3'>
                 <input
                   id='city'
                   type='text'
@@ -63,7 +63,7 @@ class CreateHome extends Component {
                 />
                 <label htmlFor='city'>City</label>
               </div>
-              <div className='input-field col s2'>
+              <div className='input-field col s1'>
                 <input
                   id='state'
                   type='text'
@@ -72,7 +72,7 @@ class CreateHome extends Component {
                 />
                 <label htmlFor='state'>State</label>
               </div>
-              <div className='input-field col s2'>
+              <div className='input-field col s1'>
                 <input
                   id='zipcode'
                   type='text'
@@ -80,6 +80,15 @@ class CreateHome extends Component {
                   className='validate'
                 />
                 <label htmlFor='zipcode'>Zipcode</label>
+              </div>
+              <div className='input-field col s4'>
+                <input
+                  id='imageURL'
+                  type='text'
+                  onChange={this.changeHandler}
+                  className='validate'
+                />
+                <label htmlFor='imageURL'>Image URL</label>
               </div>
             </div>
             <div className='row'>
@@ -113,7 +122,7 @@ class CreateHome extends Component {
               <div className='input-field col s2'>
                 <input
                   id='bathrooms'
-                  step="0.25"
+                  step='0.25'
                   type='number'
                   onChange={this.changeHandler}
                   className='validate'
@@ -139,7 +148,12 @@ class CreateHome extends Component {
                 <label htmlFor='parkingSpots'>Parking Spots</label>
               </div>
             </div>
-
+            <div className='row'>
+              <div className='input-field col s12'>
+                <label htmlFor='overview'>Overview</label>
+                <textarea id='overview' className='materialize-textarea' onChange={this.changeHandler}/>
+              </div>
+            </div>
             <div className='row'>
               <div className='input-field col s12'>
                 <button
