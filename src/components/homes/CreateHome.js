@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {createHome} from '../../store/actions/homeActions';
+
 
 class CreateHome extends Component {
   state = {
@@ -173,4 +176,4 @@ class CreateHome extends Component {
   }
 }
 
-export default CreateHome;
+export default connect()(CreateHome);

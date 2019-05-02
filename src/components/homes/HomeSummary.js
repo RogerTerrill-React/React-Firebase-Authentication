@@ -1,14 +1,14 @@
 import React from 'react';
 
-const HomeSummary = () => {
+const HomeSummary = ({home}) => {
   return (
     <div className="card hoverable home-summary">
       <div className="card-image grey-text text-darken-3">
         <img
-          src="https://images.beazer.com/452ad1b7-5aa6-41df-904b-f1e07761e2ce-c"
+          src= {home.image1Link}
           alt="home"
         />
-        <span className="card-title">40 Fringe Tree, Irvine, CA 92606</span>
+        <span className="card-title">{home.address}, {home.city}, {home.state} {home.zipcode}</span>
       </div>
       <div className="card-content">
         <p>Specs on the home</p>
