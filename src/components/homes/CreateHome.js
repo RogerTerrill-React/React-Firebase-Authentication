@@ -29,7 +29,7 @@ class CreateHome extends Component {
     bedrooms: 0,
     bathrooms: 0,
     parkingSpots: 0,
-    image1Link: ''
+    imageURL: ''
   };
 
   changeHandler = event => {

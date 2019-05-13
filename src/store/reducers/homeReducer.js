@@ -12,7 +12,7 @@ const initState = {
       bedrooms: 2,
       bathrooms: 2,
       parkingSpots: 1,
-      image1Link: 'https://images.beazer.com/452ad1b7-5aa6-41df-904b-f1e07761e2ce-c'
+      imageURL: 'https://images.beazer.com/452ad1b7-5aa6-41df-904b-f1e07761e2ce-c'
     },
     {
       id: '2',
@@ -26,7 +26,7 @@ const initState = {
       bedrooms: 3,
       bathrooms: 2.5,
       parkingSpots: 2,
-      image1Link: 'https://cdn.mihomes.com/-/media/Images/MIHomes/Products/charlotte/Communities/allen-mills/7-21-17/CommunityExterior3.ashx?ts=20170721122140'
+      imageURL: 'https://cdn.mihomes.com/-/media/Images/MIHomes/Products/charlotte/Communities/allen-mills/7-21-17/CommunityExterior3.ashx?ts=20170721122140'
     },
     {
       id: '3',
@@ -40,7 +40,7 @@ const initState = {
       bedrooms: 3,
       bathrooms: 2.5,
       parkingSpots: 2,
-      image1Link: 'https://images.beazer.com/347809a3-364c-4f35-a938-ccf04b6d1ff7-c'
+      imageURL: 'https://images.beazer.com/347809a3-364c-4f35-a938-ccf04b6d1ff7-c'
     }
   ]
 };

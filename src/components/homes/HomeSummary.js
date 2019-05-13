@@ -5,7 +5,7 @@ const HomeSummary = ({home}) => {
     <div className="card hoverable home-summary">
       <div className="card-image grey-text text-darken-3">
         <img
-          src= {home.image1Link}
+          src= {home.imageURL}
           alt="home"
         />
         <span className="card-title">{home.address}, {home.city}, {home.state} {home.zipcode}</span>
